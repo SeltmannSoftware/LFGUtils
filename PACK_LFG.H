@@ -37,15 +37,15 @@
  0018-001B	4	Total space required for all files after expansion (in bytes).
                 Least significant byte first.
  --------------- FILE DATA, REPEAT FOR EACH FILE [32 bytes] --------------------
-            4	'FILE'
-            4	Length of data (in bytes) that follows for the compressed file,
+            4  'FILE'
+            4  Length of data (in bytes) that follows for the compressed file,
                 including headers, until next 'FILE' marker or end of archive.
                 Least significant byte first.
-            13	File name, 0 terminated.
-            1	0
-            4	Final length of expanded file (in bytes).
+            13  File name, 0 terminated.
+            1  0
+            4  Final length of expanded file (in bytes).
                 Least significant byte first.
-            6	Unknown [2,0,1,0,0,0]  (suspect uint16 2, uint32 1)
+            6  Unknown [2,0,1,0,0,0]  (suspect uint16 2, uint32 1)
             ... Compressed File Data, using PKZ 'implode'
  -------------------------------------------------------------------------------
  
@@ -64,10 +64,10 @@
 #include "IMPLODE.H"
 
 typedef enum {
-    LFG_WINDOW_1K = 4,
-    LFG_WINDOW_2K = 5,
-    LFG_WINDOW_4K = 6,
-    LFG_DEFAULT
+  LFG_WINDOW_1K = 4,
+  LFG_WINDOW_2K = 5,
+  LFG_WINDOW_4K = 6,
+  LFG_DEFAULT
 } lfg_window_size_type;
 
 int pack_lfg(lfg_window_size_type dictionary_size,

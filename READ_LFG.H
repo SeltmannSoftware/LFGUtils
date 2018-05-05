@@ -26,15 +26,15 @@
  0018-001B	4	Total space needed for all expanded files (in bytes), least
                 significant byte first.
  ---------------- FILE DATA, REPEAT FOR EACH FILE ------------------------------
-            4	'FILE'
-            4	Length of data (in bytes) that follows for the compressed file,
+            4  'FILE'
+            4  Length of data (in bytes) that follows for the compressed file,
                 including headers, until next 'FILE' marker or end of archive.
                 Least significant byte first.
-           13	File name, zero term
-            1	0
-            4	Final length of expanded file (in bytes).  Least significant
+           13  File name, zero term
+            1  0
+            4  Final length of expanded file (in bytes).  Least significant
                 byte first.
-            6	Unknown   [2,0,1,0,0,0]  (suspect uint16 2, uint32 1)
+            6  Unknown   [2,0,1,0,0,0]  (suspect uint16 2, uint32 1)
             ... Compressed File Data, using PKZ 'implode' ...
  -------------------------------------------------------------------------------
  
@@ -48,9 +48,9 @@
 
 typedef enum
 {
-    VERBOSE_LEVEL_SILENT,
-    VERBOSE_LEVEL_NORMAL,
-    VERBOSE_LEVEL_HIGH
+  VERBOSE_LEVEL_SILENT,
+  VERBOSE_LEVEL_NORMAL,
+  VERBOSE_LEVEL_HIGH
 } verbose_level_enum;
 
 int read_lfg_archive(int file_max,

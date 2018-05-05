@@ -38,13 +38,13 @@ unsigned long read_buffer_get_bytes_read( void );
    out_fp:          Output filename. NULL exceptable (stats only).
    expected_length: Expected length of file (0 if not provided).
    eof_reached():   Callback that indicates archive EOF is reached.
-		    Callback should return new file pointer with
-		    the continued data for the imploded file.
+        Callback should return new file pointer with
+        the continued data for the imploded file.
 */
 long extract_and_explode( FILE* in_fp,
-			 FILE* out_fp,
-			 long expected_length,
-			 explode_stats_type* explode_stats,
-			 FILE* (*eof_reached)(void));
+       FILE* out_fp,
+       long expected_length,
+       explode_stats_type* explode_stats,
+       FILE* (*eof_reached)(void));
 
 #endif /* explode_h */
