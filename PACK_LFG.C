@@ -6,11 +6,11 @@
 //  Copyright © 2016, 2017 Kevin Seltmann. All rights reserved.
 //
 
+#include "DOSTYPES.H"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "DOSTYPES.H"
 #include "IMPLODE.H"
 #include "PACK_LFG.H"
 

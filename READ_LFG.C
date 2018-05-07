@@ -11,11 +11,11 @@
 //  extraction reverse-engineered from existing .XXX files.  Implementation
 //  of explode algorithm based on specifications found on the internet.
 
+#include "DOSTYPES.H"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "DOSTYPES.H"
 #include "EXPLODE.H"
 #include "READ_LFG.H"
 
