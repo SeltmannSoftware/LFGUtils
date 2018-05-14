@@ -11,7 +11,7 @@
 #include "DOSTYPES.H"
 #include "READ_LFG.H"
 #define LFG_DUMP_VERSION_MAJOR 1
-#define LFG_DUMP_VERSION_MINOR 3
+#define LFG_DUMP_VERSION_MINOR 4
 
 void print_usage ( void )
 {
@@ -31,7 +31,7 @@ void print_version ( void )
   printf("\nLFGDump V%d.%d\n",
          LFG_DUMP_VERSION_MAJOR,
          LFG_DUMP_VERSION_MINOR);
-  printf("(c) Seltmann Software, 2016-2017\n\n");
+  printf("(c) Seltmann Software, 2016-2018\n\n");
 }
 
 int main (int argc, const char * argv[])

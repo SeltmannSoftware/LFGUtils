@@ -1,6 +1,5 @@
 //
-//  main.c
-//  LFGMake
+//  LFGMake.c
 //
 //  Created by Kevin Seltmann on 6/17/16.
 //  Copyright © 2016,2017 Kevin Seltmann. All rights reserved.
@@ -29,8 +28,8 @@ void print_usage ( void )
 
 void print_version ( void )
 {
-  printf("\nLFGMake V1.2\n");
-  printf("(c) Seltmann Software, 2016-2017\n\n");
+  printf("\nLFGMake V1.4\n");
+  printf("(c) Seltmann Software, 2016-2018\n\n");
 }
 
 int main (int argc, const char * argv[])
