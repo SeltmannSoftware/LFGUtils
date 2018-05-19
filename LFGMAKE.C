@@ -20,10 +20,11 @@ void print_usage ( void )
   printf("  -f filelist           Use filelist (text file) as archive file list\n");
   printf("  -h                    Display this help\n");
   printf("  -m initial_size size  Set max size for first and subsequent archive files\n");
+  printf("  -o optimize level     0-5 (0 is fast; 1,3 look ahead versions; 5 find best)\n");
   printf("  -s                    Print stats\n");
   printf("  -t                    Use ASCII (text) mode encoding of literals\n");
   printf("  -v                    Print version info\n");
-  printf("  -w N                  Use sliding window size of N k (where N=1,2,4)\n");
+  printf("  -w N                  Force sliding window size of N k (where N=1,2,4)\n");
 }
 
 void print_version ( void )

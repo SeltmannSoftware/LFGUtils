@@ -34,6 +34,14 @@ typedef struct {
   int min_length;    // Min length is 2
 } implode_stats_type;
 
+/* Optimzation level:
+ 0: No optimization. Use dictionary whenever possible without looking ahead
+ 1: Look ahead version A
+ 2: Obsolete
+ 3: Look ahead version B
+ 4: Not used
+ 5: Check A & B, use best. Also checks ASCII mode.
+ */
 unsigned long implode( FILE * in_file,
                       FILE * out_file,
                       unsigned long length,

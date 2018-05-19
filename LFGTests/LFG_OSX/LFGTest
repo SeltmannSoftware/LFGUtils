@@ -1,0 +1,47 @@
+
+if [ $# -eq 2 ]
+then
+   if [ -e $1 ]
+   then
+      FILE="${1##*/}"
+      FILE="${FILE%%.*}.LFG"
+      DIR="${2##*/}_"
+      if [ -e $FILE ]
+      then
+         echo "$FILE.LFG already exists!"
+      else
+         mkdir $DIR
+         rm $DIR/*
+
+         lfgdump -s -f -o $DIR $1
+         if [ -d $2 ]
+         then
+            diff $2 $DIR
+         else
+            echo "Directory $2 does not exist. Cannot compare against original files."
+         fi
+         ls $DIR > $DIR.txt
+         cd $DIR
+         lfgmake -f ../$DIR.txt -m 1454088 1456136 -s $FILE  
+         mkdir ../ver_$DIR
+         lfgdump -s -d -f -o ../ver_$DIR $FILE
+         cd ..
+         diff $DIR ver_$DIR
+         rm ver_$DIR/*
+         rmdir ver_$DIR
+         rm $DIR.txt
+      fi
+   else
+      echo "File $1 does not exist."
+   fi
+else
+   echo "${1%%.*}"
+   echo "${1##*.}"
+   echo "${1##*/}"
+   FILE="${1##*/}"
+   FILE="${FILE%%.*}"
+   DIR="${2##*/}_"
+   echo $FILE
+   echo $DIR
+   echo "Usage: LFGTest archive directory"
+fi
