@@ -161,9 +161,9 @@ void write_bits_msb_first( unsigned int bit_count,
 // Write some bits, lsb first.
 // Max bit_count is (sizeof(int)/8). No error checking is performed.
 void write_bits_lsb_first( unsigned int bit_count,
-                          unsigned int bits)
+                           unsigned int bits)
 {
-  int i;
+  unsigned int i;
   
   for (i=0; i<bit_count;i++)
   {
@@ -253,7 +253,7 @@ void find_literal_codes(unsigned int literal,
                         unsigned int * literal_code)
 {
   int i, delta;
-  int literal_index = literal_lookup[literal];
+  unsigned int literal_index = literal_lookup[literal];
   
   // Look through table for entry in range of the literal we want.
   for (i = 0; literal_index < literal_to_bits_table[i].lookup_min; i++ );
