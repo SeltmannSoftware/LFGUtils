@@ -27,11 +27,11 @@ typedef struct {
   long literal_count;  // Number of literals
   long lookup_count;   // Number of lookups into sliding dictionary
   
-  int max_offset;    // Max possible offset is 2^(6+N)-1
+  unsigned int max_offset;    // Max possible offset is 2^(6+N)-1
   // Assume N < 9 (valid values are 4-6).
-  int min_offset;    // Min offset is 0
-  int max_length;    // Max possible length is 518
-  int min_length;    // Min length is 2
+  unsigned int min_offset;    // Min offset is 0
+  unsigned int max_length;    // Max possible length is 518
+  unsigned int min_length;    // Min length is 2
 } implode_stats_type;
 
 /* Optimzation level:

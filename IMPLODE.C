@@ -582,7 +582,7 @@ unsigned long implode(FILE * in_file,
   
   literal_init();
   
-  bytes_loaded = fread( encoding_buffer,
+  bytes_loaded = (long)fread( encoding_buffer,
                        sizeof encoding_buffer[0],
                        ENCODE_BUFF_LOAD_SIZE,
                        in_file);
