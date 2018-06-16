@@ -426,13 +426,17 @@ int read_lfg_archive(int file_max,
     {
       printf("Warning: Unexpected values in header. File may be corrupted.\n");
     }
-    
+
     disk_info.file_pos += file_info.length;
     
     if (verbose != VERBOSE_LEVEL_SILENT)
     {
       printf("  %-13s",  file_info.filename);
     }
+	else
+	{
+	  printf("%s\n", file_info.filename);
+	}
     
     disk_info.file_count++;
     

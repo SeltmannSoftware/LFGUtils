@@ -21,6 +21,7 @@ void print_usage ( void )
   printf("   -d              Display process details\n");
   printf("   -f              Force overwrite of existing files during extraction\n");
   printf("   -i              Show archive info only (do not extract)\n");
+  printf("   -l              List output files\n");
   printf("   -o output_dir   Extract to directory 'output_dir'\n");
   printf("   -s              Display file stats\n");
   printf("   -v              Display version info\n\n");
@@ -36,7 +37,7 @@ void print_version ( void )
 
 int main (int argc, const char * argv[])
 {
-  int verbose = 1;
+  verbose_level_enum verbose = VERBOSE_LEVEL_NORMAL;
   bool info_only = false;
   bool show_stats = false;
   bool overwrite = false;
@@ -53,9 +54,14 @@ int main (int argc, const char * argv[])
     }
     else if (strcmp(argv[j], "-d") == 0)
     {
-      verbose = 2;
+      verbose = VERBOSE_LEVEL_HIGH;
       file_arg++;
     }
+	else if (strcmp(argv[j], "-l") == 0)
+	{
+		verbose = VERBOSE_LEVEL_SILENT;
+		file_arg++;
+	}
     else if (strcmp(argv[j], "-s") == 0)
     {
       show_stats = true;
@@ -105,7 +111,7 @@ int main (int argc, const char * argv[])
                               &argv[file_arg],
                               info_only,
                               show_stats,
-                              (verbose_level_enum)verbose,
+                              verbose,
                               overwrite,
                               output_dir);
     
