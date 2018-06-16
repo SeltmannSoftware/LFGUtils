@@ -74,7 +74,7 @@ void remove_path(char* filename,
   // Extract filename from path.
   // Start at end and move backwards until hit
   // '/' or '\'
-  unsigned long length = strlen(pathfile);
+  unsigned long length = (unsigned long)strlen(pathfile);
   int a;
   
   for (a= (int)length-1; a>=0; a--)
@@ -432,7 +432,7 @@ int pack_lfg(lfg_window_size_type dictionary_size,
     
     printf("   %10ld",  bytes_written+8);
     printf("     %10ld", length);
-    printf(" %8.2f\%%", 100-(float)((bytes_written+8) * 100) / length);
+    printf(" %8.2f%%", 100-(float)((bytes_written+8) * 100) / length);
     
     if (literal_mode==IMPLODE_ASCII)
     {
@@ -477,7 +477,7 @@ int pack_lfg(lfg_window_size_type dictionary_size,
   printf("------------------------------------------------------------------------------" );
   if (verbose)
     printf("-------------------------------------------------------------------------");
-  printf("\n                  %10ld     %10ld  %7.2f\%%\n",
+  printf("\n                  %10ld     %10ld  %7.2f%%\n",
          archive_total_length, bytes_needed, 100-(float)(archive_total_length * 100) /
          bytes_needed);
   printf("Packed %d files onto %d disk file",
