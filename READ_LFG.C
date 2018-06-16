@@ -217,9 +217,9 @@ FILE* new_file(void)
     if (disk_info.file_index+1 < disk_info.file_max)
     {
       
-      disk_info.filename_length = (unsigned long) strlen(disk_info.
+      disk_info.filename_length = strlen(disk_info.
                                          file_list[disk_info.
-                                         file_index+1]);
+                                                   file_index+1]);
       
       if (disk_info.filename_length < 256)
       {
@@ -303,7 +303,7 @@ int read_lfg_archive(int file_max,
   archive_info.total_length = 0;
   
   disk_info.file_index = file_index;
-  disk_info.filename_length = (unsigned long)strlen(file_list[disk_info.file_index]);
+  disk_info.filename_length = strlen(file_list[disk_info.file_index]);
   disk_info.file_max = file_max;
   disk_info.file_list = file_list;
   
@@ -452,10 +452,10 @@ int read_lfg_archive(int file_max,
     {
       if (output_dir)
       {
-        file_length = (unsigned long)strlen(output_dir) + 1;
+        file_length = strlen(output_dir) + 1;
       }
       
-      file_length += (unsigned long)strlen(file_info.filename) + 1;
+      file_length += strlen(file_info.filename) + 1;
       complete_filename = (char*)malloc(file_length);
       
       if (output_dir)
@@ -525,7 +525,7 @@ int read_lfg_archive(int file_max,
     {
       printf("   %10ld",  file_info.length+8);
       printf("     %10ld", file_info.final_length);
-      printf(" %8.2f%%", 100-(float)((file_info.length+8) * 100) / file_info.final_length);
+      printf(" %8.2f\%%", 100-(float)((file_info.length+8) * 100) / file_info.final_length);
       
       if (explode_stats.literal_mode==1) //IMPLODE_ASCII)
       {

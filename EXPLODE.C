@@ -431,11 +431,11 @@ int read_copy_length( void )
 // Read the offset part of a length/offset reference
 int read_copy_offset( void )
 {
-  unsigned int offset = 0;         // The offset value we are looking for.
-  unsigned int offset_bits = 0;    // Input bits for offset.
-  unsigned int diff;               // Difference used in calulating with table.
-  unsigned int num_lsbs;           // Number of lsbs to use.
-  unsigned int length;
+  int offset = 0;         // The offset value we are looking for.
+  int offset_bits = 0;    // Input bits for offset.
+  int diff;               // Difference used in calulating with table.
+  int num_lsbs;           // Number of lsbs to use.
+  int length;             //
   
   // Get 6 MS bits of the resulting offset
   offset_bits = read_bits_msb_first(2);
@@ -471,10 +471,10 @@ int read_copy_offset( void )
 // Read a literal
 unsigned char read_literal( void )
 {
-  unsigned int literal = 0;        // The offset value we are looking for.
-  unsigned int literal_bits = 0;   // Input bits for offset.
-  unsigned int diff;               // Difference used in calulating with table.
-  unsigned int length;             // Bit length
+  int literal = 0;        // The offset value we are looking for.
+  int literal_bits = 0;   // Input bits for offset.
+  int diff;               // Difference used in calulating with table.
+  int length;             // Bit length
   
   if (header.literal_mode == 0x1)
   {

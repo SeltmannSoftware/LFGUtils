@@ -158,7 +158,7 @@ int main (int argc, const char * argv[])
       long length;
       
       buffer[strcspn(buffer, "\r\n")] = 0;
-      length = (long)strlen( buffer );
+      length = strlen( buffer );
       if (length)
       {
         file_list_ptr[file_count] = (char*)malloc( sizeof(char) * length + 1);
@@ -173,7 +173,7 @@ int main (int argc, const char * argv[])
   {
     for (i=file_arg+1; i<argc; i++)
     {
-      long length = (long)strlen( argv[i] );
+      long length = strlen( argv[i] );
       file_list_ptr[file_count] = (char *)malloc( sizeof(char) * length + 1);
       strcpy(file_list_ptr[file_count], argv[i]);
       file_count++;
