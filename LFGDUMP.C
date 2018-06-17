@@ -1,17 +1,18 @@
 //
 //  main.c
-//  LFGDump V 1.1
+//  LFGDump V 1.5
 //
-//  Created by Kevin Seltmann on 6/11/16.
-//  Copyright © 2016, 2017 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 6/11/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 
 #include <stdio.h>
 #include <string.h>
 #include "DOSTYPES.H"
 #include "READ_LFG.H"
+
 #define LFG_DUMP_VERSION_MAJOR 1
-#define LFG_DUMP_VERSION_MINOR 4
+#define LFG_DUMP_VERSION_MINOR 5
 
 void print_usage ( void )
 {

@@ -1,9 +1,9 @@
 //
 //  explode.c
-//  LFGDump V 1.1
+//  LFGDump V 1.5
 //
-//  Created by Kevin Seltmann on 6/12/16.
-//  Copyright © 2016, 2017 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 6/12/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 //  Designed to extract the archiving used on LucasArts Classic Adventure
 //  install files (*.XXX) and other archives created with the PKWARE
@@ -445,8 +445,7 @@ int read_copy_offset( void )
     
     diff = offset_bits - offset_bits_to_value_table[length].base_bits;
     
-    if ( ( diff >=0 ) &&
-        (diff < offset_bits_to_value_table[length].count) )
+    if (diff < offset_bits_to_value_table[length].count)
     {
       offset = offset_bits_to_value_table[length].base_value - diff;
       break;
@@ -487,8 +486,7 @@ unsigned char read_literal( void )
       
       diff = literal_bits - literal_bits_to_index_table[length].base_bits;
       
-      if ( ( diff >=0 ) &&
-          (diff < literal_bits_to_index_table[length].count) )
+      if (diff < literal_bits_to_index_table[length].count)
       {
         literal = literal_bits_to_index_table[length].base_value - diff;
         break;

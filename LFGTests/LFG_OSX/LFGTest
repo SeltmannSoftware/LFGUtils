@@ -12,7 +12,6 @@ then
       else
          mkdir $DIR
          rm $DIR/*
-
          lfgdump -s -f -o $DIR $1
          if [ -d $2 ]
          then
@@ -20,11 +19,11 @@ then
          else
             echo "Directory $2 does not exist. Cannot compare against original files."
          fi
-         ls $DIR > $DIR.txt
+         lfgdump -i -l $1 > $DIR.txt
          cd $DIR
-         lfgmake -f ../$DIR.txt -m 1454088 1456136 -s $FILE  
+         lfgmake -f ../$DIR.txt -m 1454088 1456136 -s ../$FILE  
          mkdir ../ver_$DIR
-         lfgdump -s -d -f -o ../ver_$DIR $FILE
+         lfgdump -s -d -f -o ../ver_$DIR ../$FILE
          cd ..
          diff $DIR ver_$DIR
          rm ver_$DIR/*
@@ -35,13 +34,5 @@ then
       echo "File $1 does not exist."
    fi
 else
-   echo "${1%%.*}"
-   echo "${1##*.}"
-   echo "${1##*/}"
-   FILE="${1##*/}"
-   FILE="${FILE%%.*}"
-   DIR="${2##*/}_"
-   echo $FILE
-   echo $DIR
    echo "Usage: LFGTest archive directory"
 fi

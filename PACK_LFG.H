@@ -2,8 +2,8 @@
 //  pack_lfg.h
 //  LFGMake
 //
-//  Created by Kevin Seltmann on 11/5/16.
-//  Copyright © 2016 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 11/5/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 
 /*

@@ -2,8 +2,8 @@
 //  read_lfg.c
 //  LFGDump
 //
-//  Created by Kevin Seltmann on 10/23/16.
-//  Copyright (C) 2016 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 10/23/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 //  Designed to extract the archiving used on LucasArts Classic Adventure
 //  install files (*.XXX) and possibly other archives created with the PKWARE
@@ -472,8 +472,7 @@ int read_lfg_archive(int file_max,
       // Check if file exists. Not handling any race condition
       // in which file is created after check by another process.
       // (Not worth the trouble here at least)
-      if ((!overwrite_flag) &&
-          ((out_fp = fopen(complete_filename, "r"))))
+      if (!overwrite_flag && ((out_fp = fopen(complete_filename, "r")) != 0))
       {
         fclose(out_fp);
         

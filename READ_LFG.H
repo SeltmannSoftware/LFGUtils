@@ -2,8 +2,8 @@
 //  read_lfg.h
 //  LFGDump
 //
-//  Created by Kevin Seltmann on 10/23/16.
-//  Copyright © 2016 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 10/23/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 //  Designed to read the archiving used on LucasArts Classic Adventure
 //  install files (*.XXX) and other Lucasfilm Games archives created with the

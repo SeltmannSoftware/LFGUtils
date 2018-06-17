@@ -2,8 +2,8 @@
 //  pack_lfg.c
 //  LFGMake
 //
-//  Created by Kevin Seltmann on 11/5/16.
-//  Copyright © 2016, 2017 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 11/5/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 
 #include "DOSTYPES.H"
@@ -100,7 +100,6 @@ int check_ascii( FILE * in_file,
       break;
     }
   }
-  
   fseek ( in_file, 0, SEEK_SET );
   
   return ascii;
@@ -257,12 +256,11 @@ int pack_lfg(lfg_window_size_type dictionary_size,
   if (fp_out== 0)
   {
     printf("Error creating file %s for archive.\n\n", archive);
-    //free(full_archive_path);
+
     return -1;
   }
   
   remove_path(archive_name, full_archive_path, 13);
-  //strncpy( archive_name, archive, 13);
   
   // Write out "LFG!" tag
   fwrite( lfg_string, sizeof(unsigned char), 4, fp_out);
@@ -327,7 +325,7 @@ int pack_lfg(lfg_window_size_type dictionary_size,
     //Remove path
     remove_path(filename, file_list[file_num], 13);
     
-    printf("  %-13s", filename); //file_list[file_num]);
+    printf("  %-13s", filename);
     
     // Find file length
     fseek ( fp_in, 0, SEEK_END );
@@ -460,7 +458,7 @@ int pack_lfg(lfg_window_size_type dictionary_size,
       {
         printf("          N/A         N/A");
       }
-      printf("     %7.3f", (double)(stop - start) / CLOCKS_PER_SEC);
+      printf("   %9.3f", (double)(stop - start) / CLOCKS_PER_SEC);
       printf("             %d", optimization_level);
     }
     printf("\n");

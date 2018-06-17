@@ -2,8 +2,8 @@
 //  implode.h
 //  LFGMake
 //
-//  Created by Kevin Seltmann on 6/17/16.
-//  Copyright © 2016 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 6/17/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 
 #ifndef implode_h

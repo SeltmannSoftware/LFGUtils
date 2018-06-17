@@ -1,9 +1,9 @@
 //
 //  explode.h
-//  LFGDump V 1.1
+//  LFGDump V 1.5
 //
-//  Created by Kevin Seltmann on 6/12/16.
-//  Copyright © 2016, 2017 Kevin Seltmann. All rights reserved.
+//  Created by Seltmann Software on 6/12/16.
+//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
 //
 //  Designed to extract the archiving used on LucasArts Classic Adventure
 //  install files (*.XXX) and possibly other archives created with the PKWARE
