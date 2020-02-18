@@ -492,8 +492,9 @@ int pack_lfg(lfg_window_size_type dictionary_size,
   write_le_word(bytes_needed, fp_first);
   fclose(fp_first);
   
-  if (fp_out) fclose(fp_out);
-  if (fp_current_file_start) fclose(fp_current_file_start);
+  if (fp_out!=fp_first) fclose(fp_out);
+  
+  if ((fp_current_file_start!=fp_first) && (fp_current_file_start != fp_out)) fclose(fp_current_file_start);
   
   return 0;
 }

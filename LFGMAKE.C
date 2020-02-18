@@ -16,7 +16,7 @@
 
 void print_usage ( void )
 {
-  printf("\nUsage: LFGMake [options] archive_name archive_file_1 archive_file_2 ... \n");
+  printf("Usage: LFGMake [options] archive_name archive_file_1 archive_file_2 ... \n");
   printf("Creates an LFG-type archive.\n\n");
   printf("Options:\n");
   printf("  -f filelist           Use filelist (text file) as archive file list\n");
@@ -26,7 +26,7 @@ void print_usage ( void )
   printf("  -s                    Print stats\n");
   printf("  -t                    Use ASCII (text) mode encoding of literals\n");
   printf("  -v                    Print version info\n");
-  printf("  -w N                  Force sliding window size of N k (where N=1,2,4)\n");
+  printf("  -w N                  Force sliding window size of N k (where N=1,2,4)\n\n");
 }
 
 void print_version ( void )
