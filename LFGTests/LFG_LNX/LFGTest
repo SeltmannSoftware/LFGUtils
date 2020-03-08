@@ -8,23 +8,25 @@ then
       DIR="${2##*/}_"
       if [ -e $FILE ]
       then
-         echo "$FILE.LFG already exists!"
+         echo "$FILE already exists!"
       else
          mkdir $DIR
          rm $DIR/*
          lfgdump -s -f -o $DIR $1
          if [ -d $2 ]
          then
+            echo "Diff original ($2) vs extraction ($DIR)"
             diff $2 $DIR
          else
             echo "Directory $2 does not exist. Cannot compare against original files."
          fi
          lfgdump -i -l $1 > $DIR.txt
          cd $DIR
-         lfgmake -f ../$DIR.txt -m 1454088 1456136 -s ../$FILE  
+         lfgmake -o 5 -f ../$DIR.txt -m 1454088 1456136 -s ../$FILE  
          mkdir ../ver_$DIR
          lfgdump -s -d -f -o ../ver_$DIR ../$FILE
          cd ..
+         echo "Diff: original extraction ($DIR) vs new extraction (ver_$DIR)"
          diff $DIR ver_$DIR
          rm ver_$DIR/*
          rmdir ver_$DIR

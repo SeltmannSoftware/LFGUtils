@@ -3,7 +3,7 @@
 //  LFGDump V 1.5
 //
 //  Created by Seltmann Software on 6/11/16.
-//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
+//  Copyright © 2016,2017,2018,2020 Seltmann Software. All rights reserved.
 //
 
 #include <stdio.h>
@@ -12,7 +12,7 @@
 #include "READ_LFG.H"
 
 #define LFG_DUMP_VERSION_MAJOR 1
-#define LFG_DUMP_VERSION_MINOR 5
+#define LFG_DUMP_VERSION_MINOR 6
 
 void print_usage ( void )
 {
@@ -34,7 +34,7 @@ void print_version ( void )
   printf("\nLFGDump V%d.%d\n",
          LFG_DUMP_VERSION_MAJOR,
          LFG_DUMP_VERSION_MINOR);
-  printf("(c) Seltmann Software, 2016-2018\n\n");
+  printf("(c) Seltmann Software, 2016-2020\n\n");
 }
 
 int main (int argc, const char * argv[])
@@ -59,11 +59,11 @@ int main (int argc, const char * argv[])
       verbose = VERBOSE_LEVEL_HIGH;
       file_arg++;
     }
-	else if (strcmp(argv[j], "-l") == 0)
-	{
-		verbose = VERBOSE_LEVEL_SILENT;
-		file_arg++;
-	}
+    else if (strcmp(argv[j], "-l") == 0)
+    {
+      verbose = VERBOSE_LEVEL_SILENT;
+      file_arg++;
+    }
     else if (strcmp(argv[j], "-s") == 0)
     {
       show_stats = true;

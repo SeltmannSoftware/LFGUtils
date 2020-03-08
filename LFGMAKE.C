@@ -2,7 +2,7 @@
 //  LFGMake.c
 //
 //  Created by Seltmann Software on 6/17/16.
-//  Copyright © 2016,2017,2018 Seltmann Software. All rights reserved.
+//  Copyright © 2016,2017,2018,2020 Seltmann Software. All rights reserved.
 //
 
 #include "DOSTYPES.H"
@@ -12,7 +12,7 @@
 #include "PACK_LFG.H"
 
 #define LFG_MAKE_VERSION_MAJOR 1
-#define LFG_MAKE_VERSION_MINOR 5
+#define LFG_MAKE_VERSION_MINOR 6
 
 void print_usage ( void )
 {
@@ -34,7 +34,7 @@ void print_version ( void )
   printf("\nLFGMake V%d.%d\n",
          LFG_MAKE_VERSION_MAJOR,
          LFG_MAKE_VERSION_MINOR);
-  printf("(c) Seltmann Software, 2016-2018\n\n");
+  printf("(c) Seltmann Software, 2016-2020\n\n");
 }
 
 int main (int argc, const char * argv[])

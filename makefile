@@ -1,10 +1,10 @@
-DUMP_OBJS =  EXPLODE.O READ_LFG.O LFGDUMP.O
+DUMP_OBJS = EXPLODE.O READ_LFG.O LFGDUMP.O
 MAKE_OBJS = IMPLODE.O PACK_LFG.O LFGMAKE.O
 
-LFGDUMP: $(DUMP_OBJS)
-	$(CC) $^ -o $@
+lfgdump: $(DUMP_OBJS)
+	gcc $^ -o $@
 
-LFGMAKE: $(MAKE_OBJS)
+lfgmake: $(MAKE_OBJS)
 	gcc $^ -o $@
 
 %.O: %.C
