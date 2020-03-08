@@ -11,12 +11,18 @@ Old-school users:
 
 
 Use DoxBox (or ancient DOS PC). Either use make:
+
 C:\LFGUTILS>LFGBUILD.BAT
 
 or load the Borland project file:
+
+
 C:\LFGUTILS>cd BC_PRJ
+
 C:\LFGUTILS\BC_PRJ\BC LFGMAKE.PRJ
+
 or
+
 C:\LFGUTILS\BC_PRJ\BC LFGDUMP.PRJ
 
 
