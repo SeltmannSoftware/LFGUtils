@@ -15,25 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IMPLODE.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LFGMAKE.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PACK_LFG.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="..\DOSTYPES.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EXPLODE.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\READ_LFG.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DOSTYPES.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PACK_LFG.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IMPLODE.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="..\EXPLODE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\LFGDUMP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\READ_LFG.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

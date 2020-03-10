@@ -1,0 +1,3 @@
+cd ..
+lfgmake -f LFGUTILS.TXT %1 %2 -s LFGTESTS\LFGUTILS.LFG
+cd LFGTESTS

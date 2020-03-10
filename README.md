@@ -1,28 +1,23 @@
 # LFGUtils
 Command-line utilities to create and expand old LucasFilm Game (LFG) archives.  These archive files had extensions like .XXX, .ND3, .ND4, and .MI2 and were used in 1992-era LucasFilm PC games that came on disk but needed to be installed to a hard drive.
 
-LFGDump - Extract from archive. 
+LFGDump - Extract from archive.
 
 LFGMake - Create archive.
 
-Project files included for Xcode and Borland C++ v3.1!
-
-Old-school users:
 
 
-Use DoxBox (or ancient DOS PC). Either use make:
+Linux:
 
-C:\LFGUTILS>LFGBUILD.BAT
+make lfgdump lfgmake clean
 
-or load the Borland project file:
+DOS:
 
+Old-school users can compile DOS version; it has been tested using Borland C++ 3.1 (code is actually just c).
+Use DoxBox (or an actual ancient DOS PC). Note that 'make' and 'bcc' should be accessible (ie, in path). Use:
 
-C:\LFGUTILS>cd BC_PRJ
+LFGBUILD.BAT
 
-C:\LFGUTILS\BC_PRJ\BC LFGMAKE.PRJ
+or load the Borland project files in the BC_PRJ subdirectory.
 
-or
-
-C:\LFGUTILS\BC_PRJ\BC LFGDUMP.PRJ
-
-
+For Windows using VisualStudio, solution file is in the VS_PRJ directory.
