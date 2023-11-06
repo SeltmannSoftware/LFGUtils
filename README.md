@@ -1,5 +1,5 @@
 # LFGUtils
-Command-line utilities to create and expand old LucasFilm Game (LFG) archives.  These archive files had extensions like .XXX, .ND3, .ND4, and .MI2 and were used in 1992-era LucasFilm PC games that came on disk but needed to be installed to a hard drive.
+Command-line utilities to create and expand old LucasFilm Game (LFG) archives.  These archive files had extensions like .XXX, .ND3, .ND4, and .MI2 and were used in 1991/1992-era LucasFilm PC games that came on disk but needed to be installed to a hard drive.
 
 ## LFGDump
 ```
